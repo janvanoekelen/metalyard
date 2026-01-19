@@ -13,11 +13,11 @@ func main() {
 
 	// Placeholder config
 	config := shared.ServerConfig{
-		ListenAddr: ":8080",
-		DBPath:     "./gpu-pool.db",
+		ListenAddr:   ":8080",
+		DatabasePath: "./gpu-pool.db",
 	}
 
-	fmt.Printf("Config: listen=%s db=%s\n", config.ListenAddr, config.DBPath)
+	fmt.Printf("Config: listen=%s db=%s\n", config.ListenAddr, config.DatabasePath)
 
 	// TODO: Initialize SQLite
 	// TODO: Start HTTP server

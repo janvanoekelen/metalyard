@@ -5,7 +5,7 @@ all: build
 build: agent server
 
 agent:
-	go build -o bin/gpu-agent ./src/agent
+	cd src/agent && go build -o ../../bin/gpu-agent .
 
 server:
 	go build -o bin/gpu-server ./src/server
@@ -25,10 +25,10 @@ vet:
 
 # Cross-compilation targets
 agent-linux:
-	GOOS=linux GOARCH=amd64 go build -o bin/gpu-agent-linux-amd64 ./src/agent
+	cd src/agent && GOOS=linux GOARCH=amd64 go build -o ../../bin/gpu-agent-linux-amd64 .
 
 agent-darwin:
-	GOOS=darwin GOARCH=arm64 go build -o bin/gpu-agent-darwin-arm64 ./src/agent
+	cd src/agent && GOOS=darwin GOARCH=arm64 go build -o ../../bin/gpu-agent-darwin-arm64 .
 
 agent-windows:
-	GOOS=windows GOARCH=amd64 go build -o bin/gpu-agent-windows-amd64.exe ./src/agent
+	cd src/agent && GOOS=windows GOARCH=amd64 go build -o ../../bin/gpu-agent-windows-amd64.exe .

@@ -1,5 +1,8 @@
 # Build artifacts
 bin/
+*.exe
+*.test
+coverage.out
 
 # IDE
 .idea/
@@ -9,6 +12,13 @@ bin/
 # OS
 .DS_Store
 
-# Test artifacts
-*.test
-coverage.out
+# SQLite databases
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Runtime state
+.runtime/
+state.json
+.beads/

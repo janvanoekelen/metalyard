@@ -1,0 +1,14 @@
+# Build artifacts
+bin/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# Test artifacts
+*.test
+coverage.out
